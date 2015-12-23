@@ -29,10 +29,10 @@ class CardView: UIView {
 
     @IBInspectable var radius: CGFloat = 2
     @IBInspectable var offsetWidth: Int = 0
-    @IBInspectable var offesetHeigth: Int = 3
+    @IBInspectable var offsetHeight: Int = 3
 
     @IBInspectable var shadowColor: UIColor = UIColor.blackColor()
-    @IBInspectable var shadowOpactity: Float = 0.5
+    @IBInspectable var shadowOpacity: Float = 0.5
 
     override func layoutSubviews() {
         layer.cornerRadius = radius
@@ -40,8 +40,8 @@ class CardView: UIView {
 
         layer.masksToBounds = false
         layer.shadowColor = shadowColor.CGColor
-        layer.shadowOffset = CGSize(width: offsetWidth, height: offesetHeigth);
-        layer.shadowOpacity = shadowOpactity
+        layer.shadowOffset = CGSize(width: offsetWidth, height: offsetHeight);
+        layer.shadowOpacity = shadowOpacity
         layer.shadowPath = shadowPath.CGPath
     }
 
